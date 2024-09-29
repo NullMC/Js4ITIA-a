@@ -22,7 +22,7 @@ if(var1 === var1V){
 }
 else{
     WAcounter++
-    alert("risposta sbagliata, versione corretta: ", + var1V)
+    alert("risposta sbagliata, risposta corretta: ", + var1V)
 }
 
 
@@ -44,7 +44,7 @@ if(var2 === var2V){
 }
 else{
     WAcounter++
-    alert("risposta sbagliata, versione corretta: ", var2V)
+    alert("risposta sbagliata, risposta corretta: ", + var2V)
 }
 
 
@@ -66,5 +66,5 @@ if(var3 === var3V){
 }
 else{
     WAcounter++
-    alert("risposta sbagliata, versione corretta: ", var3V)
+    alert("risposta sbagliata, risposta corretta: ", + var3V)
 }
