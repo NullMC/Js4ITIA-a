@@ -114,7 +114,7 @@ function startQuiz(){
 
 
 
-    let var7 = prompt("Come si chiama il creatore di questo sito? -> ");
+    let var7 = prompt("Dove vivono i canguri? -> ");
     while (var7 === null || var7 === "") {
         var7 = prompt("Completare il campo richiesto: ");
     }
