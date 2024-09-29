@@ -38,3 +38,18 @@ body {
     margin-top: 10px;
     font-weight: bold;
 }
+
+.container button{
+    border: none;
+    padding: 2vw;
+    background-color: #303030;
+    color: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: ease-in 0.1s;
+}
+
+.container button:hover{
+    background-color: white;
+    color: #303030;
+}
