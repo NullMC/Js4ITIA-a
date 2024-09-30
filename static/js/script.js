@@ -1,3 +1,17 @@
+function autoSanitize(string){
+    string = string.toLocaleLowerCase();
+    string = string.trim();
+
+    return string
+}
+
+function calcoloPercentuale(percentuale, totale){
+    let perc = (percentuale / totale) * 100
+
+    return perc
+}
+
+
 function startQuiz(){
     let RAcounter = 0; //contatori
     let WAcounter = 0;
@@ -16,8 +30,7 @@ function startQuiz(){
     while (var1 === null || var1 === "") {
         var1 = prompt("Completare il campo richiesto: ");
     }
-    var1 = var1.toLocaleLowerCase();
-    var1 = var1.trim();
+    var1 = autoSanitize(var1)
 
     if (var1 === var1V) {
         RAcounter++;
@@ -33,8 +46,7 @@ function startQuiz(){
     while (var2 === null || var2 === "") {
         var2 = prompt("Completare il campo richiesto: ");
     }
-    var2 = var2.toLocaleLowerCase();
-    var2 = var2.trim();
+    var2 = autoSanitize(var2)
 
     if (var2 === var2V) {
         RAcounter++;
@@ -50,8 +62,7 @@ function startQuiz(){
     while (var3 === null || var3 === "") {
         var3 = prompt("Completare il campo richiesto: ");
     }
-    var3 = var3.toLocaleLowerCase();
-    var3 = var3.trim();
+    var3 = autoSanitize(var3)
 
     if (var3 === var3V) {
         RAcounter++;
@@ -67,8 +78,7 @@ function startQuiz(){
     while (var4 === null || var4 === "") {
         var4 = prompt("Completare il campo richiesto: ");
     }
-    var4 = var4.toLocaleLowerCase();
-    var4 = var4.trim();
+    var4 = autoSanitize(var4)
 
     if (var4 === var4V) {
         RAcounter++;
@@ -84,8 +94,7 @@ function startQuiz(){
     while (var5 === null || var5 === "") {
         var5 = prompt("Completare il campo richiesto: ");
     }
-    var5 = var5.toLocaleLowerCase();
-    var5 = var5.trim();
+    var5 = autoSanitize(var5)
 
     if (var5 === var5V) {
         RAcounter++;
@@ -101,8 +110,7 @@ function startQuiz(){
     while (var6 === null || var6 === "") {
         var1 = prompt("Completare il campo richiesto: ");
     }
-    var6 = var6.toLocaleLowerCase();
-    var6 = var6.trim();
+    var6 = autoSanitize(var6)
 
     if (var6 === var6V) {
         RAcounter++;
@@ -118,10 +126,9 @@ function startQuiz(){
     while (var7 === null || var7 === "") {
         var7 = prompt("Completare il campo richiesto: ");
     }
-    var7 = var7.toLocaleLowerCase();
-    var7 = var7.trim();
+    var7 = autoSanitize(var7)
 
-    if (var7 === var7) {
+    if (var7 === var7V) {
         RAcounter++;
         alert("Risposta esatta");
     } else {
@@ -131,8 +138,9 @@ function startQuiz(){
 
 
     let totaleDomande = 7;
-    let percentualeCorrette = (RAcounter / totaleDomande) * 100;
-    let percentualeSbagliate = (WAcounter / totaleDomande) * 100;
+
+    let percentualeCorrette = calcoloPercentuale(RAcounter, totaleDomande)
+    let percentualeSbagliate = calcoloPercentuale(WAcounter, totaleDomande)
 
     console.log(`Risultato finale: ${RAcounter} risposte esatte (${percentualeCorrette.toFixed(2)}%) e ${WAcounter} risposte sbagliate (${percentualeSbagliate.toFixed(2)}%)`);
 }
