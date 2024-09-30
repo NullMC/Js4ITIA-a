@@ -134,5 +134,5 @@ function startQuiz(){
     let percentualeCorrette = (RAcounter / totaleDomande) * 100;
     let percentualeSbagliate = (WAcounter / totaleDomande) * 100;
 
-    alert(`Risultato finale: ${RAcounter} risposte esatte (${percentualeCorrette.toFixed(2)}%) e ${WAcounter} risposte sbagliate (${percentualeSbagliate.toFixed(2)}%)`);
+    console.log(`Risultato finale: ${RAcounter} risposte esatte (${percentualeCorrette.toFixed(2)}%) e ${WAcounter} risposte sbagliate (${percentualeSbagliate.toFixed(2)}%)`);
 }
